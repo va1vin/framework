@@ -3,7 +3,7 @@
 	use \Core\Controller;
 	
 	class PageController extends Controller
-	{
+	{ protected $title = 'Page Title';
         public function show1()
 		{
 			echo 'кук';
@@ -14,9 +14,8 @@
 			echo 'тута';
 		}        
         public function act()
-        {
-           
-				return $this->render('page/act');
+        {	 
+			return $this->render('page/act');
         }
         private $pages;
 		
