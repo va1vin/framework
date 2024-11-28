@@ -15,7 +15,10 @@
 		}        
         public function act()
         {	 
-			return $this->render('page/act');
+			return $this->render('page/act',[
+				'header' => 'список юзеров',
+				'users'  => ['user1', 'user2', 'user3'],
+			]);
         }
         private $pages;
 		
