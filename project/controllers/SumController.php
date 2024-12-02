@@ -4,7 +4,7 @@
 
  class SumController extends Controller{
     public function sum($params)
-    {
+    {   $this->title = 'Сумма чисел';
         $n1 = (int)$params['n1'];
         $n2 = (int)$params['n2'];
         $n3 = (int)$params['n3'];

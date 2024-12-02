@@ -6,7 +6,7 @@
 	{ protected $title = 'Page Title';
         private $products;
         public function prod()
-		{
+		{   $this->title = 'продукты';
 			$this->products = [
                 1 => [
                     'name'     => 'product1',
@@ -41,7 +41,7 @@
             ];
 		}
         public function show($params)
-		{
+		{   $this->title = 'показ продуктов';
             $this->prod();
             $productId = $params['n'];
            
@@ -50,7 +50,7 @@
             ]);
 		}
         public function all()
-        {
+        { $this->title = 'все продукты';
             $this->prod();
             return $this->render('product/all', [
                 'products' => $this->products,
